@@ -1,0 +1,72 @@
+{
+  "name": "LeadInquiry",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Prospect's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Prospect's email address"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company or organization name"
+    },
+    "role": {
+      "type": "string",
+      "description": "Prospect's role/title"
+    },
+    "inquiry_type": {
+      "type": "string",
+      "enum": [
+        "Consultation",
+        "App Development",
+        "Outsourcing",
+        "AI Automation",
+        "DevOps",
+        "Homerun / Product",
+        "Investor",
+        "Other"
+      ],
+      "description": "Type of inquiry"
+    },
+    "pain_point": {
+      "type": "string",
+      "description": "Core pain point or goal described by the prospect"
+    },
+    "timeline": {
+      "type": "string",
+      "description": "How soon they want to move"
+    },
+    "budget_range": {
+      "type": "string",
+      "description": "Approximate budget range"
+    },
+    "preferred_call_time": {
+      "type": "string",
+      "description": "Preferred day/time for discovery call"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any additional notes or context from the conversation"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Reviewed",
+        "Call Scheduled",
+        "Not a Fit",
+        "Closed"
+      ],
+      "default": "New",
+      "description": "Current status of the lead"
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}
